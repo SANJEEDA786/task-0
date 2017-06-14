@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CHERRY JACKPOT GAME</title>
+<style>
+ 
+ body
+ {
+       background-image : url('bg.jpg');
+
+ }
+
+</style>
+</head>
+<body>
+
+<h1 style="color:red"><center>CHERRY JACKPOT GAME</center></h1>
+<h3 style="color:green"><center>RULES:-<BR>ON SPIN WITH ALL NUMBERS SAME;U GET +200</center></h3>
+<h3 style="color:green"><center>IF NUMBERS DONT MATCH -2</center></h3>
+<center><table style="width:40%" border="2px solid black">  
+<tr>
+ <th id="t1">-</th>
+ <th id="t2">-</th>
+ <th id="t3">-</th>
+ </tr>
+ </table>
+<button type ="submit" onclick="myFunction()">spin</button>
+ <table style="width:40%" border="2px solid black">                   
+  <tr>
+  <th id ="t4">score</th>
+  <th id ="t5">0</th>
+  </tr>
+  </table>
+</center>
+<script>
+a=0;
+ function myFunction()
+ {
+   var x = Math.floor((Math.random() * 10));
+   document.getElementById("t1").innerHTML=x;
+   var y =Math.floor((Math.random() * 10));
+   document.getElementById("t2").innerHTML=y;
+   var z = Math.floor((Math.random() * 10));
+   document.getElementById("t3").innerHTML= z ;
+if(x==y&&y==z&&z==x)
+{
+  a+=200;
+    document.getElementById("t5").innerHTML=a;
+}
+   else
+   {
+  a-=1;
+    document.getElementById("t5").innerHTML=a;
+    }
+ }
+
+</script>
+</body>
+</html>
